@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Периодическая система Кайманов</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+
+        window.caymalements = [
+            ["Voblaa", "", "229", "300", "Воблий", "Леряу", "", "FALSE", "Vo", "TRUE"],
+            ["Loryrain", "", "243", "349", "Лориний", "", "", "FALSE", "Lo", "FALSE"],
+            ["APLEAS", "", "262", "332", "Исий", "Аплеасий", "", "FALSE", "Is", "FALSE"],
+            ["Ambrosla", "", "310", "358", "Юрий", "", "", "FALSE", "Ur", "FALSE"],
+            ["Br0djaga", "61", "329", "383", "Бродягий", "", "", "FALSE", "Br", "FALSE"],
+            ["Хексад", "", "370", "429", "Хексадий", "", "", "FALSE", "Xe", "FALSE"],
+            ["Continentale", "", "381", "397", "Континенталий", "", "", "FALSE", "Co", "FALSE"],
+            ["KCat", "", "401", "416", "Ккатий", "", "", "FALSE", "Ca", "FALSE"],
+            ["Frezzi", "", "416", "385", "Фреззий", "", "", "FALSE", "Fz", "FALSE"],
+            ["Holyman", "", "421", "443", "Холиманий", "", "", "FALSE", "Hl", "FALSE"],
+            ["Клевернутая", "49", "421", "398", "Клеверий", "Хурмий", "Хурмяу", "FALSE", "Kl", "TRUE"],
+            ["EisrneKreuz", "", "431", "359", "Айзерний", "Алексий", "Алексяу*", "FALSE", "Ez", "TRUE"],
+            ["Meteliza", "61", "443", "430", "Металайзий", "", "", "FALSE", "Mz", "FALSE"],
+            ["Церберовна", "", "444", "370", "Церберовий", "", "", "FALSE", "Ce", "FALSE"],
+            ["Hapkomanka", "", "453", "390", "Плотвий", "Владий*", "", "FALSE", "Pl", "FALSE"],
+            ["Adamanteus", "", "454", "441", "Адамантий", "", "", "FALSE", "Ad", "FALSE"],
+            ["Angellus", "", "456", "331", "Ангелусий", "Мариний", "", "FALSE", "Al", "FALSE"],
+            ["Meloy", "", "459", "359", "Мелоий", "", "", "FALSE", "Ml", "FALSE"],
+            ["Furtado", "61", "462", "408", "Фуртадий", "", "", "FALSE", "Ft", "FALSE"],
+            ["Avalon", "61", "481", "407", "Авалоний", "", "", "FALSE", "Av", "FALSE"],
+            ["Sumeragi", "", "483", "362", "Сумерагий", "Димий", "", "FALSE", "Su", "FALSE"],
+            ["FairyWater", "59", "485", "409", "Лерий", "", "", "FALSE", "Le", "FALSE"],
+            ["Slevin", "", "488", "409", "Слэвиний", "", "", "FALSE", "Sl", "FALSE"],
+            ["EXESIDER", "59", "495", "365", "Эксайдерий", "", "", "FALSE", "Es", "FALSE"],
+            ["Церберовна-2 Stepus", "", "502", "362", "Степусий", "", "", "FALSE", "St", "FALSE"],
+            ["Ryudjin", "61", "507", "412", "Рюджиний", "", "", "FALSE", "Ry", "FALSE"],
+            ["Ne1ro", "62", "508", "425", "Неирий", "", "", "FALSE", "Ne", "FALSE"],
+            ["Koa", "61", "512", "379", "Никитий", "Воиний", "", "FALSE", "Ko", "FALSE"],
+            ["Aellaf", "58", "513", "453", "Аеллафий", "", "", "FALSE", "Ae", "FALSE"],
+            ["WanBuren", "", "515", "398", "Ванбюрений", "", "", "FALSE", "Vb", "FALSE"],
+            ["БеверлиХилз", "", "516", "363", "Беверлий", "", "", "FALSE", "Be", "FALSE"],
+            ["DubDog", "", "522", "408", "Доний", "", "", "FALSE", "Do", "FALSE"],
+            ["Anglin", "", "524", "446", "Анджилиний", "", "", "FALSE", "An", "FALSE"],
+            ["Правильный", "", "526", "375", "Филипий", "", "", "FALSE", "Ph", "FALSE"],
+            ["Beyerlong", "60", "527", "416", "Байерлонгий", "", "", "FALSE", "Ba", "FALSE"],
+            ["Bakster", "61", "530", "441", "Бакстерий", "", "", "FALSE", "Bs", "FALSE"],
+            ["Footsunushi", "", "536", "412", "Футсунуший", "Никитосий", "", "FALSE", "Fo", "TRUE"],
+            ["ХПринцПенсииХ", "", "537", "410", "Пенсий", "", "", "FALSE", "Pp", "FALSE"],
+            ["Kissdeaths", "61", "544", "419", "Иваний", "", "", "FALSE", "Iv", "FALSE"],
+            ["Кубер", "", "544", "377", "Куберий", "", "", "FALSE", "Ky", "FALSE"],
+            ["Mix", "", "548", "435", "Миксий", "Миксяу*", "Каймапапий", "FALSE", "Mi", "TRUE"],
+            ["Верченко", "", "559", "379", "Катий", "Оладушек", "", "FALSE", "Ka", "TRUE"],
+            ["MetalGear", "66", "561", "385", "Металлий", "Мауий", "", "FALSE", "Mt", "FALSE"],
+            ["Lucky3", "", "569", "368", "Лакий", "Максий", "", "FALSE", "La", "FALSE"],
+            ["Kunoichi", "", "589", "395", "Кивий", "Кусяу", "Пикавикий", "FALSE", "Ki", "TRUE"],
+            ["Zanir", "", "604", "402", "Занирий", "Кириллий", "", "FALSE", "Zn", "FALSE"],
+            ["ИНКОГНИТО", "", "613", "428", "Елений", "Каймамамий", "", "FALSE", "El", "TRUE"],
+            ["Excellent7", "", "631", "426", "Экселентий", "", "", "FALSE", "Ex", "TRUE"],
+            ["Krosh2211", "", "631", "402", "Кроший", "Крошау", "Геншик*", "FALSE", "Kr", "TRUE"],
+            ["ProstoSam", "", "639", "406", "Сэмий", "", "", "FALSE", "Ps", "FALSE"],
+            ["Мёдик", "62", "641", "450", "Мёдий", "", "", "FALSE", "Mё", "FALSE"],
+            ["Miller124", "49", "647", "425", "Миллерий", "", "", "FALSE", "Mr", "FALSE"],
+            ["AnGelNoChi", "61", "668", "501", "Ангелночий", "Настий", "", "FALSE", "Ag", "FALSE"],
+            ["Bakster-2 Vester", "48", "670", "439", "Вестерий", "", "", "FALSE", "Vs", "FALSE"],
+            ["FrF", "61", "679", "501", "Сантьягий", "", "", "FALSE", "Fr", "FALSE"],
+            ["Экзотический", "49", "683", "428", "Дятлий*", "Дятляу*", "", "FALSE", "Dt", "TRUE"],
+            ["Teronanobite", "", "684", "414", "Теронанобайтий", "", "", "FALSE", "Tr", "FALSE"],
+            ["Оландушек", "64", "700", "428", "Тиний", "Тиняу", "", "FALSE", "Tn", "TRUE"],
+            ["HooTeRs", "", "701", "397", "Хутерсий", "", "", "FALSE", "Ht", "FALSE"],
+            ["Keineth", "", "705", "461", "Юлий", "Фуряу", "", "FALSE", "Ul", "FALSE"],
+            ["Hakayomi", "65", "707", "417", "Хакаёмий", "", "", "FALSE", "Xa", "FALSE"],
+            ["Rawk", "62", "723", "450", "Роукий", "", "", "FALSE", "Ra", "FALSE"],
+            ["Вальдагор", "", "", "451", "Вальдагорий", "", "", "FALSE", "Va", "FALSE"],
+            ["Incognitus", "", "", "432", "Инкогнитусий", "Ромий", "", "FALSE", "In", "FALSE"],
+            ["VeryAncient", "", "", "428", "Соломоний", "", "", "FALSE", "Sm", "FALSE"],
+            ["AkaiTsuki", "", "", "408", "Акатсукиий", "", "", "FALSE", "At", "TRUE"],
+            ["Drakon41k", "", "", "402", "Драконий", "Артемий", "", "FALSE", "Dr", "FALSE"],
+            ["MyDevka", "", "", "352", "Майий", "", "", "FALSE", "My", "FALSE"],
+            ["Gilarik", "", "", "344", "Гиларий", "", "", "FALSE", "Gi", "FALSE"],
+            ["ЛоганД", "", "", "343", "Асъхений", "Асяу", "", "FALSE", "As", "TRUE"],
+            ["Мороус", "", "", "342", "Мороусий", "", "", "FALSE", "Ms", "FALSE"],
+            ["Гудспид", "", "", "332", "Гудспидий", "", "", "FALSE", "Hiv", "FALSE"],
+            ["Верченко-3 Don0mar", "", "", "326", "Костий", "", "", "FALSE", "Ks", "FALSE"],
+            ["BoberkaDk", "", "", "217", "Боберкий", "", "", "FALSE", "Bo", "FALSE"],
+            ["Верчинко-2", "", "", "", "Богданий*", "", "", "TRUE", "Bg", "FALSE"],
+            ["Bodya", "", "", "", "Бодий", "", "", "TRUE", "Bd", "TRUE"],
+            ["CODEWEIN", "", "", "", "Нурий", "", "", "TRUE", "Cw", "TRUE"],
+            ["Monspit", "", "", "", "Монспитий", "Дестроий", "", "TRUE", "Mo", "TRUE"],
+            ["Siegel", "", "", "", "Зевий", "Зевяу", "", "TRUE", "Ze", "TRUE"],
+            ["Kunoichi-2", "", "", "", "Ипконфий", "", "", "FALSE", "Ip", "FALSE"],
+        ]
+
+        $(function () {
+
+            $('.caymalement').each(function (index) {
+                if (index >= window.caymalements.length) return false;
+
+                let $td = $(this);
+                let caymalement = window.caymalements[index],
+                    _name = caymalement[4],
+                    _symbol = caymalement[8],
+                    _index = index + 1;
+                //$td.addClass(category);
+                $td.append(`
+                        <span class="index">${_index}</span>
+                        <span class="rad">☢</span>
+                        <span class="symbol">${_symbol}</span>
+                        <span class="name">${_name}</span>
+                    `);
+                //let bgColor = $td.css('background-color');
+                $td.mouseenter(function () {
+                    console.debug('mouseenter');
+                    /*
+                    $focusIndex.text(index);
+                    $focusSymbol.text(symbol);
+                    $focusName.text(name);
+                    $focusQuality.text(quality);
+                    $focus.css('background-color', bgColor);
+                    $atomicN.text('+' + index);
+                    for (i = 0; i < econfigs.length; i++) {
+                        $atomicEs[i].text(econfigs[i]);
+                        $atomicEs[i].parent().css('visibility', 'visible');
+                    }
+                    for (i = econfigs.length; i < 7; i++) {
+                        $atomicEs[i].parent().css('visibility', 'hidden');
+                    }
+                        */
+                });
+            });
+
+        })
+    </script>
+    <style>
+        body {
+            min-width: 1190px;
+        }
+
+        table.periodic {
+            border-spacing: 6px;
+            font-family: 'Roboto';
+        }
+
+        table.periodic tr td {
+            border-width: 0;
+            text-align: center;
+            width: 48px;
+            height: 56px;
+            position: relative;
+        }
+
+        table.periodic tr td.caymalement {
+            padding: 4px;
+            border-radius: 2px;
+            border: 1px solid rgba(85, 85, 85, 0.95);
+            cursor: pointer;
+            background-color: #58a85a;
+        }
+
+        table.periodic tr td.caymalement:hover {
+            opacity: 0.95;
+            box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.95);
+        }
+
+        table.periodic tr td.empty {
+            background-color: transparent;
+        }
+
+        .caymalement span.index {
+            position: absolute;
+            display: block;
+            top: 1px;
+            left: 2px;
+            font-size: 8pt;
+        }
+
+        .caymalement span.rad {
+            position: absolute;
+            display: block;
+            top: -3px;
+            right: 1px;
+            font-size: 11pt;
+        }
+
+        .caymalement span.symbol {
+            position: absolute;
+            display: block;
+            top: 6px;
+            left: 0;
+            right: 0;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+
+        .caymalement span.name {
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            margin-top: 3px;
+            word-break: break-all;
+            line-height: 1;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="periodic">
+        <!-- Row 1 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 5 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+        </tr>
+        <!-- Row 6 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+        </tr>
+        <!-- Row 7 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+        </tr>
+        <!-- Row 8 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 9 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 10 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement"></td>
+            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
