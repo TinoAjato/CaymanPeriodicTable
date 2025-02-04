@@ -78,9 +78,9 @@
             ["Stepus", "St", "Степусий", false, "", false, "", false, "0", "502", "362", false, false, false],
             ["Lucky3", "La", "Лакий", false, "Максий", false, "", false, "0", "569", "368", false, false, false],
             ["AkaiTsuki", "At", "Акатсукиий", false, "", false, "", false, "0", "0", "408", false, true, false],
-            ["Верченко", "Ka", "Катий<br>**", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false],
+            ["Верченко", "Ka", "Катий **", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false],
             ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", false, false, false],
-            ["Don0mar", "Ks", "Костий<br>**", false, "", false, "", false, "0", "0", "326", false, false, false],
+            ["Don0mar", "Ks", "Костий **", false, "", false, "", false, "0", "0", "326", false, false, false],
             ["APLEAS", "Is", "Исий", false, "Аплеасий", false, "", false, "0", "262", "332", false, false, false],
             ["Ambrosla", "Am", "Амброслий", false, "Юрий", false, "", false, "0", "310", "358", false, false, false],
             ["MyDevka", "My", "Майий", false, "", false, "", false, "0", "0", "352", false, false, false],
@@ -105,6 +105,8 @@
 
         var $focus, $focus_name, $focus_nameRad, $focus_symbol, $focus_anime, $focus_pizza, $focus_index;
 
+        var $card, $cName, $cRad, $cTName, $cIsotopes, $cBLvl, $cELvl, $cVLvl, $cACayman, $cAnime, $cPizza;
+
         $(function () {
             let _randomCayman = randomInteger(0, window.caymalements.length - 1);
 
@@ -116,7 +118,18 @@
             $focus_pizza = $focus.find('span.pizza');
             $focus_index = $focus.find('span.index');
 
-            console.debug($focus_name);
+            $card = $('#card');
+            $cName = $card.find('span.name');
+            $cRad = $card.find('span.rad');
+            $cTName = $card.find('span.tName');
+            $cIsotopes = $card.find('span.isotopes');
+            $cBLvl = $card.find('span.bLvl');
+            $cELvl = $card.find('span.eLvl');
+            $cVLvl = $card.find('span.vLvl');
+            $cACayman = $card.find('span.aCayman');
+            $cAnime = $card.find('span.anime');
+            $cPizza = $card.find('span.pizza');
+
             $('td.caymalement:not(.skip)').each(function (index) {
                 if (index >= window.caymalements.length) return false;
 
@@ -142,44 +155,75 @@
                 _pizza = caymalement[13],
                 _index = index + 1;
 
-            $td.append(`
-                        <span class="index">${_index}</span>
-                        <span class="symbol">${_symbol}</span>
-                        <span class="name">${_name}</span>
-                    `);
+            $td.append(`<span class="index">${_index}</span>`);
+            $td.append(`<span class="symbol">${_symbol}</span>`);
+            $td.append(`<span class="name">${_name}</span>`);
 
             if (_nameRad) $td.append(`<span class="rad">☢</span>`);
             if (_anime) $td.append(`<span class="anime">A+</span>`);
             if (_pizza) $td.append(`<span class="pizza">Pz</span>`);
 
-            //$td.addClass(category);
-            //let bgColor = $td.css('background-color');
             $td.mouseenter(function () {
-                console.debug('mouseenter');
-
-                $focus_name.text(_name);
-                console.debug($focus_name);
-                $focus_nameRad.text(_nameRad);
-                $focus_symbol.text(_symbol);
-                $focus_anime.text(_anime);
-                $focus_pizza.text(_pizza);
-                $focus_index.text(_index);
-
-                /*
-                $focusIndex.text(index);
-                $focusSymbol.text(symbol);
-                $focusName.text(name);
-                $focusQuality.text(quality);
-                $focus.css('background-color', bgColor);
-                    */
-            }).mouseleave(function () {
-                //$("#floatingmes").hide();
-                console.debug('mouseleave');
+                setData(caymalement, _index);
             });
         }
 
         function randomInteger(min, max) {
             return Math.floor(min + Math.random() * (max - min + 1))
+        }
+
+        function setData(el, _index) {
+
+            $focus_name.text(el[2]);
+            $focus_symbol.text(el[1]);
+
+            $focus_index.text(_index);
+
+            if (el[3])
+                $focus_nameRad.text('☢');
+            else
+                $focus_nameRad.text('');
+
+            if (el[12])
+                $focus_anime.text('A+');
+            else
+                $focus_anime.text('');
+
+            if (el[13])
+                $focus_pizza.text('Pz');
+            else
+                $focus_pizza.text('');
+
+            //карточка 
+            $cName.text(el[2]);
+
+            if (el[3])
+                $cRad.text('Радиоактивный');
+            else
+                $cRad.text('Не радиоактивный');
+
+            $cTName.text(el[0]);
+
+            let
+                isotope1 = el[4] + (el[5] ? ' ☢ (рад.)' : ''),
+                isotope2 = el[6] + (el[7] ? ' ☢ (рад.)' : '');
+
+            $cIsotopes.text(isotope1 + (isotope2.length > 0 ? ';  ' + isotope2 : ''));
+
+            $cBLvl.text(el[8]);
+            $cELvl.text(el[9]);
+            $cVLvl.text(el[10]);
+            $cACayman.text(el[11] ? 'ДА' : 'НЕТ');
+            $cAnime.text(el[12] ? 'Сэмпай' : 'Кохай');
+
+            if (el[0] === 'EisrneKreuz') {
+                $cPizza.text('ОДНОЗНАЧНО ДА');
+            } else
+                if (el[0] === 'Оландушек') {
+                    $cPizza.text('ОДНОЗНАЧНО НЕТ');
+                } else
+                    $cPizza.text(el[13] ? 'Да' : 'Нет');
+
         }
 
     </script>
@@ -194,8 +238,7 @@
         }
 
         table.periodic tr td {
-            border: 1px solid rgba(85, 85, 85, 0.95);
-            /*border-width: 0;*/
+            border-width: 0;
             text-align: center;
             width: 48px;
             height: 56px;
@@ -261,8 +304,8 @@
             position: absolute;
             display: block;
             top: 10px;
-            left: 0;
-            right: 0;
+            left: 0px;
+            right: 0px;
             font-size: 18pt;
             font-weight: bold;
         }
@@ -270,9 +313,9 @@
         .caymalement span.name {
             position: absolute;
             display: block;
-            left: 0;
-            right: 0;
-            margin-top: 5px;
+            left: 0px;
+            right: 0px;
+            top: 38px;
             word-break: break-all;
             line-height: 1;
             font-size: 10pt;
@@ -288,15 +331,24 @@
         }
 
         .focus-element {
-            background-color: #58a85a;
+            background-color: rgba(74, 204, 78, 0.9);
             border: 1px solid rgba(85, 85, 85, 0.95);
-            text-align: center;
-            width: 48px;
-            height: 56px;
+            padding: 2px;
+            border-radius: 4px;
+            width: 56px;
+            height: 64px;
             position: absolute;
-            top: 0px;
-            left: 0px;
+            top: -10px;
+            left: 30px;
             scale: 2;
+        }
+
+        .card {
+            position: absolute;
+            text-align: left;
+            top: 10px;
+            left: 140px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -469,6 +521,18 @@
                     <span class="rad"></span>
                     <span class="anime"></span>
                     <span class="pizza"></span>
+                </div>
+
+                <div id="card" class="card">
+                    Элемент: <u><span class="name"></span></u>. <span class="rad"></span><br>
+                    Традиционное название: <b><span class="tName"></span></b><br>
+                    Изотопы: <u><span class="isotopes"></span></u><br>
+                    <!--Боевой уровень: <u><span class="bLvl"></span></u><br>
+                    Энергия: <u><span class="eLvl"></span></u><br-->
+                    Влияние: <u><span class="vLvl"></span></u><br>
+                    Является откайманившемся: <b><span class="aCayman"></span></b><br>
+                    Состоит в аниме-подгруппе: <u><span class="anime"></span></u><br>
+                    Должен пиццу: <u><span class="pizza"></span></u>
                 </div>
 
             </td>
