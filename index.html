@@ -15,141 +15,187 @@
 
     <script>
 
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
         window.caymalements = [
-            ["Voblaa", "", "229", "300", "Воблий", "Леряу", "", "FALSE", "Vo", "TRUE"],
-            ["Loryrain", "", "243", "349", "Лориний", "", "", "FALSE", "Lo", "FALSE"],
-            ["APLEAS", "", "262", "332", "Исий", "Аплеасий", "", "FALSE", "Is", "FALSE"],
-            ["Ambrosla", "", "310", "358", "Юрий", "", "", "FALSE", "Ur", "FALSE"],
-            ["Br0djaga", "61", "329", "383", "Бродягий", "", "", "FALSE", "Br", "FALSE"],
-            ["Хексад", "", "370", "429", "Хексадий", "", "", "FALSE", "Xe", "FALSE"],
-            ["Continentale", "", "381", "397", "Континенталий", "", "", "FALSE", "Co", "FALSE"],
-            ["KCat", "", "401", "416", "Ккатий", "", "", "FALSE", "Ca", "FALSE"],
-            ["Frezzi", "", "416", "385", "Фреззий", "", "", "FALSE", "Fz", "FALSE"],
-            ["Holyman", "", "421", "443", "Холиманий", "", "", "FALSE", "Hl", "FALSE"],
-            ["Клевернутая", "49", "421", "398", "Клеверий", "Хурмий", "Хурмяу", "FALSE", "Kl", "TRUE"],
-            ["EisrneKreuz", "", "431", "359", "Айзерний", "Алексий", "Алексяу*", "FALSE", "Ez", "TRUE"],
-            ["Meteliza", "61", "443", "430", "Металайзий", "", "", "FALSE", "Mz", "FALSE"],
-            ["Церберовна", "", "444", "370", "Церберовий", "", "", "FALSE", "Ce", "FALSE"],
-            ["Hapkomanka", "", "453", "390", "Плотвий", "Владий*", "", "FALSE", "Pl", "FALSE"],
-            ["Adamanteus", "", "454", "441", "Адамантий", "", "", "FALSE", "Ad", "FALSE"],
-            ["Angellus", "", "456", "331", "Ангелусий", "Мариний", "", "FALSE", "Al", "FALSE"],
-            ["Meloy", "", "459", "359", "Мелоий", "", "", "FALSE", "Ml", "FALSE"],
-            ["Furtado", "61", "462", "408", "Фуртадий", "", "", "FALSE", "Ft", "FALSE"],
-            ["Avalon", "61", "481", "407", "Авалоний", "", "", "FALSE", "Av", "FALSE"],
-            ["Sumeragi", "", "483", "362", "Сумерагий", "Димий", "", "FALSE", "Su", "FALSE"],
-            ["FairyWater", "59", "485", "409", "Лерий", "", "", "FALSE", "Le", "FALSE"],
-            ["Slevin", "", "488", "409", "Слэвиний", "", "", "FALSE", "Sl", "FALSE"],
-            ["EXESIDER", "59", "495", "365", "Эксайдерий", "", "", "FALSE", "Es", "FALSE"],
-            ["Церберовна-2 Stepus", "", "502", "362", "Степусий", "", "", "FALSE", "St", "FALSE"],
-            ["Ryudjin", "61", "507", "412", "Рюджиний", "", "", "FALSE", "Ry", "FALSE"],
-            ["Ne1ro", "62", "508", "425", "Неирий", "", "", "FALSE", "Ne", "FALSE"],
-            ["Koa", "61", "512", "379", "Никитий", "Воиний", "", "FALSE", "Ko", "FALSE"],
-            ["Aellaf", "58", "513", "453", "Аеллафий", "", "", "FALSE", "Ae", "FALSE"],
-            ["WanBuren", "", "515", "398", "Ванбюрений", "", "", "FALSE", "Vb", "FALSE"],
-            ["БеверлиХилз", "", "516", "363", "Беверлий", "", "", "FALSE", "Be", "FALSE"],
-            ["DubDog", "", "522", "408", "Доний", "", "", "FALSE", "Do", "FALSE"],
-            ["Anglin", "", "524", "446", "Анджилиний", "", "", "FALSE", "An", "FALSE"],
-            ["Правильный", "", "526", "375", "Филипий", "", "", "FALSE", "Ph", "FALSE"],
-            ["Beyerlong", "60", "527", "416", "Байерлонгий", "", "", "FALSE", "Ba", "FALSE"],
-            ["Bakster", "61", "530", "441", "Бакстерий", "", "", "FALSE", "Bs", "FALSE"],
-            ["Footsunushi", "", "536", "412", "Футсунуший", "Никитосий", "", "FALSE", "Fo", "TRUE"],
-            ["ХПринцПенсииХ", "", "537", "410", "Пенсий", "", "", "FALSE", "Pp", "FALSE"],
-            ["Kissdeaths", "61", "544", "419", "Иваний", "", "", "FALSE", "Iv", "FALSE"],
-            ["Кубер", "", "544", "377", "Куберий", "", "", "FALSE", "Ky", "FALSE"],
-            ["Mix", "", "548", "435", "Миксий", "Миксяу*", "Каймапапий", "FALSE", "Mi", "TRUE"],
-            ["Верченко", "", "559", "379", "Катий", "Оладушек", "", "FALSE", "Ka", "TRUE"],
-            ["MetalGear", "66", "561", "385", "Металлий", "Мауий", "", "FALSE", "Mt", "FALSE"],
-            ["Lucky3", "", "569", "368", "Лакий", "Максий", "", "FALSE", "La", "FALSE"],
-            ["Kunoichi", "", "589", "395", "Кивий", "Кусяу", "Пикавикий", "FALSE", "Ki", "TRUE"],
-            ["Zanir", "", "604", "402", "Занирий", "Кириллий", "", "FALSE", "Zn", "FALSE"],
-            ["ИНКОГНИТО", "", "613", "428", "Елений", "Каймамамий", "", "FALSE", "El", "TRUE"],
-            ["Excellent7", "", "631", "426", "Экселентий", "", "", "FALSE", "Ex", "TRUE"],
-            ["Krosh2211", "", "631", "402", "Кроший", "Крошау", "Геншик*", "FALSE", "Kr", "TRUE"],
-            ["ProstoSam", "", "639", "406", "Сэмий", "", "", "FALSE", "Ps", "FALSE"],
-            ["Мёдик", "62", "641", "450", "Мёдий", "", "", "FALSE", "Mё", "FALSE"],
-            ["Miller124", "49", "647", "425", "Миллерий", "", "", "FALSE", "Mr", "FALSE"],
-            ["AnGelNoChi", "61", "668", "501", "Ангелночий", "Настий", "", "FALSE", "Ag", "FALSE"],
-            ["Bakster-2 Vester", "48", "670", "439", "Вестерий", "", "", "FALSE", "Vs", "FALSE"],
-            ["FrF", "61", "679", "501", "Сантьягий", "", "", "FALSE", "Fr", "FALSE"],
-            ["Экзотический", "49", "683", "428", "Дятлий*", "Дятляу*", "", "FALSE", "Dt", "TRUE"],
-            ["Teronanobite", "", "684", "414", "Теронанобайтий", "", "", "FALSE", "Tr", "FALSE"],
-            ["Оландушек", "64", "700", "428", "Тиний", "Тиняу", "", "FALSE", "Tn", "TRUE"],
-            ["HooTeRs", "", "701", "397", "Хутерсий", "", "", "FALSE", "Ht", "FALSE"],
-            ["Keineth", "", "705", "461", "Юлий", "Фуряу", "", "FALSE", "Ul", "FALSE"],
-            ["Hakayomi", "65", "707", "417", "Хакаёмий", "", "", "FALSE", "Xa", "FALSE"],
-            ["Rawk", "62", "723", "450", "Роукий", "", "", "FALSE", "Ra", "FALSE"],
-            ["Вальдагор", "", "", "451", "Вальдагорий", "", "", "FALSE", "Va", "FALSE"],
-            ["Incognitus", "", "", "432", "Инкогнитусий", "Ромий", "", "FALSE", "In", "FALSE"],
-            ["VeryAncient", "", "", "428", "Соломоний", "", "", "FALSE", "Sm", "FALSE"],
-            ["AkaiTsuki", "", "", "408", "Акатсукиий", "", "", "FALSE", "At", "TRUE"],
-            ["Drakon41k", "", "", "402", "Драконий", "Артемий", "", "FALSE", "Dr", "FALSE"],
-            ["MyDevka", "", "", "352", "Майий", "", "", "FALSE", "My", "FALSE"],
-            ["Gilarik", "", "", "344", "Гиларий", "", "", "FALSE", "Gi", "FALSE"],
-            ["ЛоганД", "", "", "343", "Асъхений", "Асяу", "", "FALSE", "As", "TRUE"],
-            ["Мороус", "", "", "342", "Мороусий", "", "", "FALSE", "Ms", "FALSE"],
-            ["Гудспид", "", "", "332", "Гудспидий", "", "", "FALSE", "Hiv", "FALSE"],
-            ["Верченко-3 Don0mar", "", "", "326", "Костий", "", "", "FALSE", "Ks", "FALSE"],
-            ["BoberkaDk", "", "", "217", "Боберкий", "", "", "FALSE", "Bo", "FALSE"],
-            ["Верчинко-2", "", "", "", "Богданий*", "", "", "TRUE", "Bg", "FALSE"],
-            ["Bodya", "", "", "", "Бодий", "", "", "TRUE", "Bd", "TRUE"],
-            ["CODEWEIN", "", "", "", "Нурий", "", "", "TRUE", "Cw", "TRUE"],
-            ["Monspit", "", "", "", "Монспитий", "Дестроий", "", "TRUE", "Mo", "TRUE"],
-            ["Siegel", "", "", "", "Зевий", "Зевяу", "", "TRUE", "Ze", "TRUE"],
-            ["Kunoichi-2", "", "", "", "Ипконфий", "", "", "FALSE", "Ip", "FALSE"],
-        ]
+            ["FrF", "Fr", "Сантьягий", false, "", false, "", false, "61", "679", "501", false, false, false],
+            ["AnGelNoChi", "Ag", "Ангелночий", false, "Настий", false, "", false, "61", "668", "501", false, false, false],
+            ["Keineth", "Ke", "Кийнатий", false, "Фуряу", false, "", false, "0", "705", "461", false, false, false],
+            ["Excellent7", "Ex", "Экселентий", false, "", false, "", false, "0", "631", "426", false, true, false],
+            ["Aellaf", "Ae", "Аеллафий", false, "", false, "", false, "58", "513", "453", false, false, false],
+            ["Вальдагор", "Va", "Вальдагорий", false, "", false, "", false, "0", "0", "451", false, false, false],
+            ["Rawk", "Ra", "Роукий", false, "", false, "", false, "62", "723", "450", false, false, false],
+            ["Мёдик", "Mё", "Мёдий", false, "", false, "", false, "62", "641", "450", false, false, false],
+            ["Anglin", "An", "Анджилиний", false, "", false, "", false, "0", "524", "446", false, false, false],
+            ["Bakster", "Bs", "Бакстерий", false, "", false, "", false, "61", "530", "441", false, false, false],
+            ["Vester", "Vs", "Вестерий", false, "", false, "", false, "48", "670", "439", false, false, false],
+            ["ИНКОГНИТО", "El", "Елений", false, "Каймамамий", false, "", false, "0", "613", "428", false, true, false],
+            ["Mix", "Mi", "Миксий", false, "Каймапапий", false, "Миксяу", true, "0", "548", "435", false, true, false],
+            ["Holyman", "Hl", "Холиманий", false, "", false, "", false, "0", "421", "443", false, false, false],
+            ["Adamanteus", "Ad", "Адамантий", false, "", false, "", false, "0", "454", "441", false, false, false],
+            ["Incognitus", "In", "Инкогнитусий", false, "Ромий", false, "", false, "0", "0", "432", false, false, false],
+            ["Meteliza", "Mz", "Металайзий", false, "", false, "", false, "61", "443", "430", false, false, false],
+            ["Continentale", "Co", "Континенталей", false, "", false, "", false, "0", "381", "397", false, false, false],
+            ["Хексад", "Xe", "Хексадий", false, "", false, "", false, "0", "370", "429", false, false, false],
+            ["VeryAncient", "Sm", "Соломоний", false, "", false, "", false, "0", "0", "428", false, false, false],
+            ["Miller124", "Mr", "Миллерий", false, "", false, "", false, "49", "647", "425", false, false, false],
+            ["Ne1ro", "Ne", "Неирий", false, "", false, "", false, "62", "508", "425", false, false, false],
+            ["Kissdeaths", "Kd", "Кисдасий", false, "Иваний", false, "", false, "61", "544", "419", false, false, false],
+            ["Hakayomi", "Xa", "Хакаёмий", false, "", false, "", false, "65", "707", "417", false, false, false],
+            ["Beyerlong", "Ba", "Байерлонгий", false, "", false, "", false, "60", "527", "416", false, false, false],
+            ["KCat", "Kc", "Ккатий", false, "", false, "", false, "0", "401", "416", false, false, false],
+            ["Teronanobite", "Tr", "Теронанобайтий", false, "", false, "", false, "0", "684", "414", false, false, false],
+            ["Экзотический", "Dt", "Дятлий", true, "Дятляу", true, "", false, "49", "683", "428", false, true, false],
+            ["Footsunushi", "Fo", "Футсунуший", false, "Никитосий", false, "", false, "0", "536", "412", false, true, false],
+            ["Ryudjin", "Ry", "Рюджений", false, "", false, "", false, "61", "507", "412", false, false, false],
+            ["ХПринцПенсииХ", "Pp", "Пенсий", false, "", false, "", false, "0", "537", "410", false, false, false],
+            ["Slevin", "Sl", "Слэвиний", false, "", false, "", false, "0", "488", "409", false, false, false],
+            ["FairyWater", "Le", "Лерий", false, "", false, "", false, "59", "485", "409", false, false, false],
+            ["DubDog", "Do", "Доний", false, "", false, "", false, "0", "522", "408", false, false, false],
+            ["Furtado", "Ft", "Фуртадий", false, "", false, "", false, "61", "462", "408", false, false, false],
+            ["EXESIDER", "Es", "Эксайдерий", false, "", false, "", false, "59", "495", "365", false, false, false],
+            ["Avalon", "Av", "Авалоний", false, "", false, "", false, "61", "481", "407", false, false, false],
+            ["ProstoSam", "Ps", "Сэмий", false, "", false, "", false, "0", "639", "406", false, false, false],
+            ["Мороус", "Ms", "Мороусий", false, "", false, "", false, "0", "0", "342", false, false, false],
+            ["Zanir", "Zn", "Занирий", false, "Кириллий", false, "", false, "0", "604", "402", false, false, false],
+            ["Drakon41k", "Dr", "Драконий", false, "Артемий", false, "", false, "0", "0", "402", false, false, false],
+            ["WanBuren", "Vb", "Ванбюрений", false, "", false, "", false, "0", "515", "398", false, false, false],
+            ["Angellus", "Al", "Ангелусий", false, "Мариний", false, "", false, "0", "456", "331", false, false, false],
+            ["HooTeRs", "Ht", "Хутерсий", false, "", false, "", false, "0", "701", "397", false, false, false],
+            ["Клевернутая", "Kl", "Клеверий", false, "Хурмий", false, "Хурмяу", false, "49", "421", "398", false, true, false],
+            ["Kunoichi", "Ku", "Кивий", false, "Кусяу", false, "Пикавикий", false, "0", "589", "395", false, true, false],
+            ["Ipconfig", "Ip", "Ипконфий", false, "", false, "", false, "0", "0", "217", false, false, false],
+            ["Hapkomanka", "Pl", "Плотвий", false, "Владий", true, "", false, "0", "453", "390", false, false, false],
+            ["MetalGear", "Mt", "Металлий", false, "Мауий", false, "", false, "66", "561", "385", false, false, false],
+            ["Frezzi", "Fz", "Фреззий", false, "", false, "", false, "0", "416", "385", false, false, false],
+            ["Br0djaga", "Br", "Бродягий", false, "", false, "", false, "61", "329", "383", false, false, false],
+            ["БеверлиХилз", "Be", "Беверлий", false, "", false, "", false, "0", "516", "363", false, false, false],
+            ["Sumeragi", "Su", "Сумерагий", false, "Димий", false, "", false, "0", "483", "362", false, false, false],
+            ["Meloy", "Ml", "Мелоий", false, "", false, "", false, "0", "459", "359", false, false, false],
+            ["Koa", "Ko", "Никитий", false, "Воиний", false, "", false, "61", "512", "379", false, false, false],
+            ["Кубер", "Ky", "Куберий", false, "", false, "", false, "0", "544", "377", false, false, false],
+            ["Правильный", "Ph", "Филипий", false, "", false, "", false, "0", "526", "375", false, false, false],
+            ["Церберовна", "Ce", "Церберовий", false, "", false, "", false, "0", "444", "370", false, false, false],
+            ["Stepus", "St", "Степусий", false, "", false, "", false, "0", "502", "362", false, false, false],
+            ["Lucky3", "La", "Лакий", false, "Максий", false, "", false, "0", "569", "368", false, false, false],
+            ["AkaiTsuki", "At", "Акатсукиий", false, "", false, "", false, "0", "0", "408", false, true, false],
+            ["Верченко", "Ka", "Катий<br>**", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false],
+            ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", false, false, false],
+            ["Don0mar", "Ks", "Костий<br>**", false, "", false, "", false, "0", "0", "326", false, false, false],
+            ["APLEAS", "Is", "Исий", false, "Аплеасий", false, "", false, "0", "262", "332", false, false, false],
+            ["Ambrosla", "Am", "Амброслий", false, "Юрий", false, "", false, "0", "310", "358", false, false, false],
+            ["MyDevka", "My", "Майий", false, "", false, "", false, "0", "0", "352", false, false, false],
+            ["Loryrain", "Lo", "Лорений", false, "", false, "", false, "0", "243", "349", false, false, false],
+            ["Gilarik", "Gi", "Гиларий", false, "", false, "", false, "0", "0", "344", false, false, false],
+            ["ЛоганД", "As", "Асъхений", false, "Асяу", false, "", false, "0", "0", "343", false, true, false],
+            ["Voblaa", "Vo", "Воблий", false, "Леряу", false, "", false, "0", "229", "300", false, true, false],
+            ["Гудспид", "Hiv", "Гудспидий", false, "", false, "", false, "0", "0", "332", false, false, false],
+            ["BoberkaDk", "Bo", "Боберкий", false, "", false, "", false, "0", "0", "217", false, false, false],
+            ["Krosh2211", "Kr", "Кроший", false, "Крошау", false, "Геншик", true, "0", "631", "402", false, true, false],
+            ["EisrneKreuz", "Ez", "Айзерний", false, "Алексий", false, "Алексяу", true, "0", "431", "359", false, true, true],
+            ["Оландушек", "Tn", "Тиний", false, "Тиняу", false, "", false, "64", "700", "428", false, true, true],
+        ];
+
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
+        window.rarecaymans = [
+            ["Bodya", "Bd", "Бодий", false, "", false, "", false, "0", "0", "0", true, true, false],
+            ["CODEWEIN", "Cw", "Нурий", false, "", false, "", false, "0", "0", "0", true, true, false],
+            ["Monspit", "Mo", "Монспитий", false, "Дестроий", false, "", false, "0", "0", "0", true, true, false],
+            ["Siegel", "Ze", "Зевий", false, "Зевяу", false, "", false, "0", "0", "0", true, true, false],
+        ];
+
+        var $focus, $focus_name, $focus_nameRad, $focus_symbol, $focus_anime, $focus_pizza, $focus_index;
 
         $(function () {
+            let _randomCayman = randomInteger(0, window.caymalements.length - 1);
 
-            $('.caymalement').each(function (index) {
+            $focus = $('#focus');
+            $focus_name = $focus.find('span.name');
+            $focus_nameRad = $focus.find('span.rad');
+            $focus_symbol = $focus.find('span.symbol');
+            $focus_anime = $focus.find('span.anime');
+            $focus_pizza = $focus.find('span.pizza');
+            $focus_index = $focus.find('span.index');
+
+            console.debug($focus_name);
+            $('td.caymalement:not(.skip)').each(function (index) {
                 if (index >= window.caymalements.length) return false;
 
-                let $td = $(this);
-                let caymalement = window.caymalements[index],
-                    _name = caymalement[4],
-                    _symbol = caymalement[8],
-                    _index = index + 1;
-                //$td.addClass(category);
-                $td.append(`
-                        <span class="index">${_index}</span>
-                        <span class="rad">☢</span>
-                        <span class="symbol">${_symbol}</span>
-                        <span class="name">${_name}</span>
-                    `);
-                //let bgColor = $td.css('background-color');
-                $td.mouseenter(function () {
-                    console.debug('mouseenter');
-                    /*
-                    $focusIndex.text(index);
-                    $focusSymbol.text(symbol);
-                    $focusName.text(name);
-                    $focusQuality.text(quality);
-                    $focus.css('background-color', bgColor);
-                    $atomicN.text('+' + index);
-                    for (i = 0; i < econfigs.length; i++) {
-                        $atomicEs[i].text(econfigs[i]);
-                        $atomicEs[i].parent().css('visibility', 'visible');
-                    }
-                    for (i = econfigs.length; i < 7; i++) {
-                        $atomicEs[i].parent().css('visibility', 'hidden');
-                    }
-                        */
-                });
+                filling(index, $(this), window.caymalements);
+
+                if (index === _randomCayman) $(this).trigger('mouseenter');
+            });
+
+            $('td.caymalement.rare').each(function (index) {
+                if (index >= window.rarecaymans.length) return false;
+
+                filling(index, $(this), window.rarecaymans);
             });
 
         })
+
+        function filling(index, $td, array) {
+            let caymalement = array[index],
+                _name = caymalement[2],
+                _nameRad = caymalement[3],
+                _symbol = caymalement[1],
+                _anime = caymalement[12],
+                _pizza = caymalement[13],
+                _index = index + 1;
+
+            $td.append(`
+                        <span class="index">${_index}</span>
+                        <span class="symbol">${_symbol}</span>
+                        <span class="name">${_name}</span>
+                    `);
+
+            if (_nameRad) $td.append(`<span class="rad">☢</span>`);
+            if (_anime) $td.append(`<span class="anime">A+</span>`);
+            if (_pizza) $td.append(`<span class="pizza">Pz</span>`);
+
+            //$td.addClass(category);
+            //let bgColor = $td.css('background-color');
+            $td.mouseenter(function () {
+                console.debug('mouseenter');
+
+                $focus_name.text(_name);
+                console.debug($focus_name);
+                $focus_nameRad.text(_nameRad);
+                $focus_symbol.text(_symbol);
+                $focus_anime.text(_anime);
+                $focus_pizza.text(_pizza);
+                $focus_index.text(_index);
+
+                /*
+                $focusIndex.text(index);
+                $focusSymbol.text(symbol);
+                $focusName.text(name);
+                $focusQuality.text(quality);
+                $focus.css('background-color', bgColor);
+                    */
+            }).mouseleave(function () {
+                //$("#floatingmes").hide();
+                console.debug('mouseleave');
+            });
+        }
+
+        function randomInteger(min, max) {
+            return Math.floor(min + Math.random() * (max - min + 1))
+        }
+
     </script>
     <style>
         body {
             min-width: 1190px;
+            font-family: 'Roboto';
         }
 
         table.periodic {
             border-spacing: 6px;
-            font-family: 'Roboto';
         }
 
         table.periodic tr td {
-            border-width: 0;
+            border: 1px solid rgba(85, 85, 85, 0.95);
+            /*border-width: 0;*/
             text-align: center;
             width: 48px;
             height: 56px;
@@ -164,8 +210,12 @@
             background-color: #58a85a;
         }
 
+        table.periodic tr td.rare {
+            background-color: rgb(62, 199, 69);
+        }
+
         table.periodic tr td.caymalement:hover {
-            opacity: 0.95;
+            opacity: 0.85;
             box-shadow: 4px 4px 2px rgba(128, 128, 128, 0.95);
         }
 
@@ -181,18 +231,36 @@
             font-size: 8pt;
         }
 
+        .caymalement span.anime {
+            position: absolute;
+            display: block;
+            top: 1px;
+            left: 16px;
+            font-size: 8pt;
+            color: rgba(124, 0, 0, 0.95);
+        }
+
+        .caymalement span.pizza {
+            position: absolute;
+            display: block;
+            top: 1px;
+            left: 31px;
+            font-size: 8pt;
+            color: rgb(219, 197, 0);
+        }
+
         .caymalement span.rad {
             position: absolute;
             display: block;
             top: -3px;
             right: 1px;
-            font-size: 11pt;
+            font-size: 10pt;
         }
 
         .caymalement span.symbol {
             position: absolute;
             display: block;
-            top: 6px;
+            top: 10px;
             left: 0;
             right: 0;
             font-size: 18pt;
@@ -204,10 +272,31 @@
             display: block;
             left: 0;
             right: 0;
-            margin-top: 3px;
+            margin-top: 5px;
             word-break: break-all;
             line-height: 1;
             font-size: 10pt;
+        }
+
+        td.explanatory-text {
+            font-size: small;
+            text-align: left;
+        }
+
+        td div.focus-element {
+            position: relative;
+        }
+
+        .focus-element {
+            background-color: #58a85a;
+            border: 1px solid rgba(85, 85, 85, 0.95);
+            text-align: center;
+            width: 48px;
+            height: 56px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            scale: 2;
         }
     </style>
 </head>
@@ -217,6 +306,7 @@
     <table class="periodic">
         <!-- Row 1 -->
         <tr>
+            <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
@@ -242,6 +332,7 @@
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
+            <td class="empty"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="empty"></td>
@@ -259,6 +350,7 @@
         </tr>
         <!-- Row 3 -->
         <tr>
+            <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
@@ -297,10 +389,12 @@
             <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
+            <td class="caymalement"></td>
             <td class="empty"></td>
         </tr>
         <!-- Row 5 -->
         <tr>
+            <td class="empty"></td>
             <td class="empty"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
@@ -322,9 +416,7 @@
         </tr>
         <!-- Row 6 -->
         <tr>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
+            <td class="empty explanatory-text" colspan="4"><b>**</b> - семейство 'Верченконоидов'</td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
@@ -339,7 +431,7 @@
             <td class="empty"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
-            <td class="caymalement"></td>
+            <td class="caymalement skip"></td>
         </tr>
         <!-- Row 7 -->
         <tr>
@@ -358,66 +450,58 @@
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
-            <td class="caymalement"></td>
-            <td class="caymalement"></td>
-            <td class="caymalement"></td>
+            <td class="empty"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
         </tr>
         <!-- Row 8 -->
         <tr>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
+            <td class="empty" colspan="8" rowspan="3">
+
+                <div id="focus" class="caymalement focus-element">
+                    <span class="index"></span>
+                    <span class="symbol"></span>
+                    <span class="name"></span>
+                    <span class="rad"></span>
+                    <span class="anime"></span>
+                    <span class="pizza"></span>
+                </div>
+
+            </td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="caymalement"></td>
-            <td class="caymalement"></td>
-            <td class="caymalement"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
             <td class="empty"></td>
         </tr>
         <!-- Row 9 -->
         <tr>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
+            <td class="caymalement skip rare"></td>
+            <td class="caymalement skip rare"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="caymalement"></td>
-            <td class="caymalement"></td>
-            <td class="caymalement"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
+            <td class="caymalement skip"></td>
             <td class="empty"></td>
             <td class="empty"></td>
         </tr>
         <!-- Row 10 -->
         <tr>
+            <td class="caymalement skip rare"></td>
+            <td class="caymalement skip rare"></td>
             <td class="empty"></td>
             <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
-            <td class="empty"></td>
+            <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
             <td class="empty"></td>
