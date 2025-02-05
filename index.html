@@ -63,7 +63,7 @@
             ["HooTeRs", "Ht", "Хутерсий", false, "", false, "", false, "0", "701", "397", false, false, false],
             ["Клевернутая", "Kl", "Клеверий", false, "Хурмий", false, "Хурмяу", false, "49", "421", "398", false, true, false],
             ["Kunoichi", "Ku", "Кивий", false, "Кусяу", false, "Пикавикий", false, "0", "589", "395", false, true, false],
-            ["Ipconfig", "Ip", "Ипконфий", false, "", false, "", false, "0", "0", "217", false, false, false],
+            ["Ipconfig", "Ip", "Ипконфий", false, "", false, "", false, "0", "0", "217", true, false, false],
             ["Hapkomanka", "Pl", "Плотвий", false, "Владий", true, "", false, "0", "453", "390", false, false, false],
             ["MetalGear", "Mt", "Металлий", false, "Мауий", false, "", false, "66", "561", "385", false, false, false],
             ["Frezzi", "Fz", "Фреззий", false, "", false, "", false, "0", "416", "385", false, false, false],
@@ -79,7 +79,7 @@
             ["Lucky3", "La", "Лакий", false, "Максий", false, "", false, "0", "569", "368", false, false, false],
             ["AkaiTsuki", "At", "Акатсукиий", false, "", false, "", false, "0", "0", "408", false, true, false],
             ["Верченко", "Ka", "Катий **", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false],
-            ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", false, false, false],
+            ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", true, false, false],
             ["Don0mar", "Ks", "Костий **", false, "", false, "", false, "0", "0", "326", false, false, false],
             ["APLEAS", "Is", "Исий", false, "Аплеасий", false, "", false, "0", "262", "332", false, false, false],
             ["Ambrosla", "Am", "Амброслий", false, "Юрий", false, "", false, "0", "310", "358", false, false, false],
@@ -153,7 +153,8 @@
                 _symbol = caymalement[1],
                 _anime = caymalement[12],
                 _pizza = caymalement[13],
-                _index = index + 1;
+                _index = index + 1,
+                _acayman = caymalement[11];
 
             $td.append(`<span class="index">${_index}</span>`);
             $td.append(`<span class="symbol">${_symbol}</span>`);
@@ -162,6 +163,12 @@
             if (_nameRad) $td.append(`<span class="rad">☢</span>`);
             if (_anime) $td.append(`<span class="anime">A+</span>`);
             if (_pizza) $td.append(`<span class="pizza">Pz</span>`);
+
+            if (_acayman) {
+                $td.css('background-color', '#3ec745');
+            } else {
+                $td.css('background-color', '#58a85a');
+            }
 
             $td.mouseenter(function () {
                 setData(caymalement, _index);
@@ -213,7 +220,15 @@
             $cBLvl.text(el[8]);
             $cELvl.text(el[9]);
             $cVLvl.text(el[10]);
-            $cACayman.text(el[11] ? 'ДА' : 'НЕТ');
+
+            if (el[11]) {
+                $focus.css('background-color', '#3ec745');
+                $cACayman.text('Нет');
+            } else {
+                $focus.css('background-color', '#58a85a');
+                $cACayman.text('Да');
+            }
+
             $cAnime.text(el[12] ? 'Сэмпай' : 'Кохай');
 
             if (el[0] === 'EisrneKreuz') {
@@ -254,7 +269,7 @@
         }
 
         table.periodic tr td.rare {
-            background-color: rgb(62, 199, 69);
+            background-color: #3ec745;
         }
 
         table.periodic tr td.caymalement:hover {
@@ -331,7 +346,7 @@
         }
 
         .focus-element {
-            background-color: rgba(74, 204, 78, 0.9);
+            background-color: #4acc4ee6;
             border: 1px solid rgba(85, 85, 85, 0.95);
             padding: 2px;
             border-radius: 4px;
@@ -530,7 +545,7 @@
                     <!--Боевой уровень: <u><span class="bLvl"></span></u><br>
                     Энергия: <u><span class="eLvl"></span></u><br>
                     Влияние: <u><span class="vLvl"></span></u><br-->
-                    Является откайманившемся: <b><span class="aCayman"></span></b><br>
+                    Обладает каймановыми свойствами: <b><span class="aCayman"></span></b><br>
                     Состоит в аниме-подгруппе: <u><span class="anime"></span></u><br>
                     Должен пиццу: <u><span class="pizza"></span></u>
                 </div>
