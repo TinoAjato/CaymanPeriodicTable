@@ -105,9 +105,57 @@
             ["Dremen", "Dm", "Дремений", false, "", false, "", false, "0", "0", "0", true, false, false],
         ];
 
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
+        window.frendcaymans = [
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+        ];
+
         $(function () {
             const caymalements = window.caymalements;
             const rarecaymans = window.rarecaymans;
+            const frendcaymans = window.frendcaymans;
             const randomCaymanIndex = getRandomIndex(caymalements.length);
 
             const $focus = $('#focus');
@@ -128,6 +176,12 @@
                 if (index >= rarecaymans.length) return false;
 
                 fillElement(index, $(element), rarecaymans);
+            });
+
+            $('td.caymalement.frend').each((index, element) => {
+                if (index >= frendcaymans.length) return false;
+
+                fillElement(index, $(element), frendcaymans);
             });
 
             function fillElement(index, $td, elementsArray) {
@@ -227,7 +281,8 @@
         }
 
         table.periodic tr td {
-            border-width: 0;
+            border-width: 1px;
+            border-style: solid;
             text-align: center;
             width: 48px;
             height: 56px;
@@ -312,7 +367,14 @@
 
         td.explanatory-text {
             font-size: small;
-            text-align: left;
+        }
+
+        td.explanatory-text-druziagi {
+            align-content: end;
+            text-transform: uppercase;
+            font-family: monospace;
+            font-weight: 500;
+            font-size: x-large;
         }
 
         td div.focus-element {
@@ -498,8 +560,7 @@
         </tr>
         <!-- Row 8 -->
         <tr>
-            <td class="empty"></td>
-            <td class="empty"></td>
+            <td class="empty explanatory-text-druziagi" colspan="2">Апокайманы</td>
             <td class="empty"></td>
             <td class="empty" colspan="8" rowspan="3">
 
@@ -567,11 +628,107 @@
             <td class="caymalement skip rare"></td>
             <td class="caymalement skip rare"></td>
             <td class="empty"></td>
+            <td class="empty explanatory-text-druziagi" colspan="2">Друзьяги</td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 12 -->
+        <!-- Блок друзьяги -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 13 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 14 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+        </tr>
+        <!-- Row 15 -->
+        <tr>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
+            <td class="caymalement skip frend"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
