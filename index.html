@@ -105,148 +105,120 @@
             ["Dremen", "Dm", "Дремений", false, "", false, "", false, "0", "0", "0", true, false, false],
         ];
 
-        var $focus, $focus_name, $focus_nameRad, $focus_symbol, $focus_anime, $focus_pizza, $focus_index;
-
-        var $card, $cName, $cRad, $cTName, $cIsotopes, $cBLvl, $cELvl, $cVLvl, $cACayman, $cAnime, $cPizza;
-
         $(function () {
-            let _randomCayman = randomInteger(0, window.caymalements.length - 1);
+            const caymalements = window.caymalements;
+            const rarecaymans = window.rarecaymans;
+            const randomCaymanIndex = getRandomIndex(caymalements.length);
 
-            $focus = $('#focus');
-            $focus_name = $focus.find('span.name');
-            $focus_nameRad = $focus.find('span.rad');
-            $focus_symbol = $focus.find('span.symbol');
-            $focus_anime = $focus.find('span.anime');
-            $focus_pizza = $focus.find('span.pizza');
-            $focus_index = $focus.find('span.index');
+            const $focus = $('#focus');
+            const $card = $('#card');
 
-            $card = $('#card');
-            $cName = $card.find('span.name');
-            $cRad = $card.find('span.rad');
-            $cTName = $card.find('span.tName');
-            $cIsotopes = $card.find('span.isotopes');
-            $cBLvl = $card.find('span.bLvl');
-            $cELvl = $card.find('span.eLvl');
-            $cVLvl = $card.find('span.vLvl');
-            $cACayman = $card.find('span.aCayman');
-            $cAnime = $card.find('span.anime');
-            $cPizza = $card.find('span.pizza');
+            const focusElements = getFocusElements($focus);
+            const cardElements = getCardElements($card);
 
-            $('td.caymalement:not(.skip)').each(function (index) {
-                if (index >= window.caymalements.length) return false;
+            $('td.caymalement:not(.skip)').each((index, element) => {
+                if (index >= caymalements.length) return false;
 
-                filling(index, $(this), window.caymalements);
+                fillElement(index, $(element), caymalements);
 
-                if (index === _randomCayman) $(this).trigger('mouseenter');
+                if (index === randomCaymanIndex) $(element).trigger('mouseenter');
             });
 
-            $('td.caymalement.rare').each(function (index) {
-                if (index >= window.rarecaymans.length) return false;
+            $('td.caymalement.rare').each((index, element) => {
+                if (index >= rarecaymans.length) return false;
 
-                filling(index, $(this), window.rarecaymans);
+                fillElement(index, $(element), rarecaymans);
             });
 
-        })
+            function fillElement(index, $td, elementsArray) {
+                const elementData = elementsArray[index];
+                const elementIndex = index + 1;
+                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza] = elementData;
 
-        function filling(index, $td, array) {
-            let caymalement = array[index],
-                _name = caymalement[2],
-                _nameRad = caymalement[3],
-                _symbol = caymalement[1],
-                _anime = caymalement[12],
-                _pizza = caymalement[13],
-                _index = index + 1,
-                _acayman = caymalement[11];
-
-            $td.append(`<span class="index">${_index}</span>`);
-            $td.append(`<span class="symbol">${_symbol}</span>`);
-            $td.append(`<span class="name">${_name}</span>`);
-
-            if (_nameRad) $td.append(`<span class="rad">☢</span>`);
-            if (_anime) $td.append(`<span class="anime">A+</span>`);
-            if (_pizza) $td.append(`<span class="pizza">Pz</span>`);
-
-            if (_acayman) {
-                $td.css('background-color', '#3ec745');
-            } else {
-                $td.css('background-color', '#58a85a');
+                $td.append(createElementHTML(elementData, elementIndex));
+                $td.css('background-color', acayman ? '#3ec745' : '#58a85a');
+                $td.mouseenter(() => updateFocusAndCard(elementData, elementIndex));
             }
 
-            $td.mouseenter(function () {
-                setData(caymalement, _index);
-            });
-        }
-
-        function randomInteger(min, max) {
-            return Math.floor(min + Math.random() * (max - min + 1))
-        }
-
-        function setData(el, _index) {
-
-            $focus_name.text(el[2]);
-            $focus_symbol.text(el[1]);
-
-            $focus_index.text(_index);
-
-            if (el[3])
-                $focus_nameRad.text('☢');
-            else
-                $focus_nameRad.text('');
-
-            if (el[12])
-                $focus_anime.text('A+');
-            else
-                $focus_anime.text('');
-
-            if (el[13])
-                $focus_pizza.text('Pz');
-            else
-                $focus_pizza.text('');
-
-            //карточка 
-            $cName.text(el[2]);
-
-            if (el[3])
-                $cRad.text('Радиоактивный');
-            else
-                $cRad.text('Не радиоактивный');
-
-            $cTName.text(el[0]);
-
-            let
-                isotope1 = el[4] + (el[5] ? ' ☢ (рад.)' : ''),
-                isotope2 = el[6] + (el[7] ? ' ☢ (рад.)' : '');
-
-            $cIsotopes.text(isotope1 + (isotope2.length > 0 ? ';  ' + isotope2 : ''));
-
-            $cBLvl.text(el[8]);
-            $cELvl.text(el[9]);
-            $cVLvl.text(el[10]);
-
-            if (el[11]) {
-                $focus.css('background-color', '#3ec745');
-                $cACayman.text('Нет');
-            } else {
-                $focus.css('background-color', '#58a85a');
-                $cACayman.text('Да');
+            function createElementHTML(data, index) {
+                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza] = data;
+                return `
+            <span class="index">${index}</span>
+            <span class="symbol">${symbol}</span>
+            <span class="name">${name}</span>
+            ${nameRad ? '<span class="rad">☢</span>' : ''}
+            ${anime ? '<span class="anime">A+</span>' : ''}
+            ${pizza ? '<span class="pizza">Pz</span>' : ''}
+        `;
             }
 
-            $cAnime.text(el[12] ? 'Сэмпай' : 'Кохай');
+            function updateFocusAndCard(data, index) {
+                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza] = data;
 
-            if (el[0] === 'EisrneKreuz') {
-                $cPizza.text('ОДНОЗНАЧНО ДА');
-            } else
-                if (el[0] === 'Оландушек') {
-                    $cPizza.text('ОДНОЗНАЧНО НЕТ');
-                } else
-                    $cPizza.text(el[13] ? 'Да' : 'Нет');
+                updateFocus(focusElements, { name, symbol, index, nameRad, anime, pizza, acayman });
+                updateCard(cardElements, { name, nickname, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza });
+            }
 
-        }
+            function updateFocus(elements, data) {
+                const { name, symbol, index, nameRad, anime, pizza, acayman } = data;
+                elements.name.text(name);
+                elements.symbol.text(symbol);
+                elements.index.text(index);
+                elements.nameRad.text(nameRad ? '☢' : '');
+                elements.anime.text(anime ? 'A+' : '');
+                elements.pizza.text(pizza ? 'Pz' : '');
+                $focus.css('background-color', acayman ? '#3ec745' : '#58a85a');
+            }
+
+            function updateCard(elements, data) {
+                const { name, nickname, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza } = data;
+                elements.name.text(name);
+                elements.rad.text(nameRad ? 'Радиоактивный' : 'Не радиоактивный');
+                elements.tName.text(nickname);
+                elements.isotopes.text(`${isotope1}${isotope1Rad ? ' ☢ (рад.)' : ''}${isotope2 ? '; ' + isotope2 + (isotope2Rad ? ' ☢ (рад.)' : '') : ''}`);
+                elements.bLvl.text(lvl);
+                elements.eLvl.text(energ);
+                elements.vLvl.text(vl);
+                elements.aCayman.text(acayman ? 'Нет' : 'Да');
+                elements.anime.text(anime ? 'Сэмпай' : 'Кохай');
+                elements.pizza.text(nickname === 'EisrneKreuz' ? 'ОДНОЗНАЧНО ДА' : nickname === 'Оландушек' ? 'ОДНОЗНАЧНО НЕТ' : pizza ? 'Да' : 'Нет');
+            }
+
+            function getFocusElements($focus) {
+                return {
+                    name: $focus.find('span.name'),
+                    nameRad: $focus.find('span.rad'),
+                    symbol: $focus.find('span.symbol'),
+                    anime: $focus.find('span.anime'),
+                    pizza: $focus.find('span.pizza'),
+                    index: $focus.find('span.index')
+                };
+            }
+
+            function getCardElements($card) {
+                return {
+                    name: $card.find('span.name'),
+                    rad: $card.find('span.rad'),
+                    tName: $card.find('span.tName'),
+                    isotopes: $card.find('span.isotopes'),
+                    bLvl: $card.find('span.bLvl'),
+                    eLvl: $card.find('span.eLvl'),
+                    vLvl: $card.find('span.vLvl'),
+                    aCayman: $card.find('span.aCayman'),
+                    anime: $card.find('span.anime'),
+                    pizza: $card.find('span.pizza')
+                };
+            }
+
+            function getRandomIndex(max) {
+                return Math.floor(Math.random() * max);
+            }
+        });
 
     </script>
     <style>
         body {
-            min-width: 1190px;
+            min-width: 1250px;
             font-family: 'Roboto';
         }
 
