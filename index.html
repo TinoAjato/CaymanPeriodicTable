@@ -15,141 +15,143 @@
 
     <script>
 
-        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
+        window.mainColor = ["#58a85a", "#3ec745", "#fa07d04d"];
+
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA COLOR
         window.caymalements = [
-            ["FrF", "Fr", "Сантьягий", false, "", false, "", false, "61", "679", "501", false, false, false],
-            ["AnGelNoChi", "Ag", "Ангелночий", false, "Настий", false, "", false, "61", "668", "501", false, false, false],
-            ["Keineth", "Ke", "Кийнатий", false, "Фуряу", false, "", false, "0", "705", "461", false, false, false],
-            ["Excellent7", "Ex", "Экселентий", false, "", false, "", false, "0", "631", "426", false, true, false],
-            ["Aellaf", "Ae", "Аеллафий", false, "", false, "", false, "58", "513", "453", false, false, false],
-            ["Вальдагор", "Va", "Вальдагорий", false, "", false, "", false, "0", "0", "451", false, false, false],
-            ["Rawk", "Ra", "Роукий", false, "", false, "", false, "62", "723", "450", false, false, false],
-            ["Мёдик", "Mё", "Мёдий", false, "", false, "", false, "62", "641", "450", false, false, false],
-            ["Anglin", "An", "Анджилиний", false, "", false, "", false, "0", "524", "446", false, false, false],
-            ["Bakster", "Bs", "Бакстерий", false, "", false, "", false, "61", "530", "441", false, false, false],
-            ["Vester", "Vs", "Вестерий", false, "", false, "", false, "48", "670", "439", false, false, false],
-            ["ИНКОГНИТО", "El", "Елений", false, "Каймамамий", false, "", false, "0", "613", "428", false, true, false],
-            ["Mix", "Mi", "Миксий", true, "Каймапапий", false, "Миксяу", true, "0", "548", "435", false, true, false],
-            ["Holyman", "Hl", "Холиманий", false, "", false, "", false, "0", "421", "443", false, false, false],
-            ["Adamanteus", "Ad", "Адамантий", false, "", false, "", false, "0", "454", "441", false, false, false],
-            ["Incognitus", "In", "Инкогнитусий", false, "Ромий", false, "", false, "0", "0", "432", false, false, false],
-            ["Meteliza", "Mz", "Металайзий", false, "", false, "", false, "61", "443", "430", false, false, false],
-            ["Continentale", "Co", "Континенталей", false, "", false, "", false, "0", "381", "397", false, false, false],
-            ["Хексад", "Xe", "Хексадий", false, "", false, "", false, "0", "370", "429", false, false, false],
-            ["VeryAncient", "Sm", "Соломоний", false, "", false, "", false, "0", "0", "428", false, false, false],
-            ["Miller124", "Mr", "Миллерий", false, "", false, "", false, "49", "647", "425", false, false, false],
-            ["Ne1ro", "Ne", "Неирий", false, "", false, "", false, "62", "508", "425", false, false, false],
-            ["Kissdeaths", "Kd", "Кисдасий", false, "Иваний", false, "", false, "61", "544", "419", false, false, false],
-            ["Hakayomi", "Xa", "Хакаёмий", false, "", false, "", false, "65", "707", "417", false, false, false],
-            ["Beyerlong", "Ba", "Байерлонгий", false, "", false, "", false, "60", "527", "416", false, false, false],
-            ["KCat", "Kc", "Ккатий", false, "", false, "", false, "0", "401", "416", false, false, false],
-            ["Teronanobite", "Tr", "Теронанобайтий", false, "", false, "", false, "0", "684", "414", false, false, false],
-            ["Экзотический", "Dt", "Дятлий", true, "Дятляу", true, "", false, "49", "683", "428", false, true, false],
-            ["Footsunushi", "Fo", "Футсунуший", false, "Никитосий", false, "", false, "0", "536", "412", false, true, false],
-            ["Ryudjin", "Ry", "Рюджений", false, "", false, "", false, "61", "507", "412", false, false, false],
-            ["ХПринцПенсииХ", "Pp", "Пенсий", false, "", false, "", false, "0", "537", "410", false, false, false],
-            ["Slevin", "Sl", "Слэвиний", false, "", false, "", false, "0", "488", "409", false, false, false],
-            ["FairyWater", "Le", "Лерий", false, "", false, "", false, "59", "485", "409", false, false, false],
-            ["DubDog", "Do", "Доний", false, "", false, "", false, "0", "522", "408", false, false, false],
-            ["Furtado", "Ft", "Фуртадий", false, "", false, "", false, "61", "462", "408", false, false, false],
-            ["EXESIDER", "Es", "Эксайдерий", false, "", false, "", false, "59", "495", "365", false, false, false],
-            ["Avalon", "Av", "Авалоний", false, "", false, "", false, "61", "481", "407", false, false, false],
-            ["ProstoSam", "Ps", "Сэмий", false, "", false, "", false, "0", "639", "406", false, false, false],
-            ["Мороус", "Ms", "Мороусий", false, "", false, "", false, "0", "0", "342", false, false, false],
-            ["Zanir", "Zn", "Занирий", false, "Кириллий", false, "", false, "0", "604", "402", false, false, false],
-            ["Drakon41k", "Dr", "Драконий", false, "Артемий", false, "", false, "0", "0", "402", false, false, false],
-            ["WanBuren", "Vb", "Ванбюрений", false, "", false, "", false, "0", "515", "398", false, false, false],
-            ["Angellus", "Al", "Ангелусий", false, "Мариний", false, "", false, "0", "456", "331", false, false, false],
-            ["HooTeRs", "Ht", "Хутерсий", false, "", false, "", false, "0", "701", "397", false, false, false],
-            ["Клевернутая", "Kl", "Клеверий", false, "Хурмий", false, "Хурмяу", false, "49", "421", "398", false, true, false],
-            ["Kunoichi", "Ku", "Кивий", false, "Кусяу", false, "Пикавикий", false, "0", "589", "395", false, true, false],
-            ["Ipconfig", "Ip", "Ипконфий", false, "", false, "", false, "0", "0", "217", true, false, false],
-            ["Hapkomanka", "Pl", "Плотвий", false, "Владий", true, "", false, "0", "453", "390", false, false, false],
-            ["MetalGear", "Mt", "Металлий", false, "Мауий", false, "", false, "66", "561", "385", false, false, false],
-            ["Frezzi", "Fz", "Фреззий", false, "", false, "", false, "0", "416", "385", false, false, false],
-            ["Br0djaga", "Br", "Бродягий", false, "", false, "", false, "61", "329", "383", false, false, false],
-            ["БеверлиХилз", "Be", "Беверлий", false, "", false, "", false, "0", "516", "363", false, false, false],
-            ["Sumeragi", "Su", "Сумерагий", false, "Димий", false, "", false, "0", "483", "362", false, false, false],
-            ["Meloy", "Ml", "Мелоий", false, "", false, "", false, "0", "459", "359", false, false, false],
-            ["Koa", "Ko", "Никитий", false, "Воиний", false, "", false, "61", "512", "379", false, false, false],
-            ["Кубер", "Ky", "Куберий", false, "", false, "", false, "0", "544", "377", false, false, false],
-            ["Правильный", "Ph", "Филипий", false, "", false, "", false, "0", "526", "375", false, false, false],
-            ["Церберовна", "Ce", "Церберовий", false, "", false, "", false, "0", "444", "370", false, false, false],
-            ["Stepus", "St", "Степусий", false, "", false, "", false, "0", "502", "362", false, false, false],
-            ["Lucky3", "La", "Лакий", false, "Максий", false, "", false, "0", "569", "368", false, false, false],
-            ["AkaiTsuki", "At", "Акатсукиий", false, "", false, "", false, "0", "0", "408", false, true, false],
-            ["Верченко", "Ka", "Катий **", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false],
-            ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Don0mar", "Ks", "Костий **", false, "", false, "", false, "0", "0", "326", false, false, false],
-            ["APLEAS", "Is", "Исий", false, "Аплеасий", false, "", false, "0", "262", "332", false, false, false],
-            ["Ambrosla", "Am", "Амброслий", false, "Юрий", false, "", false, "0", "310", "358", false, false, false],
-            ["MyDevka", "My", "Майий", false, "", false, "", false, "0", "0", "352", false, false, false],
-            ["Loryrain", "Lo", "Лорений", false, "", false, "", false, "0", "243", "349", false, false, false],
-            ["Gilarik", "Gi", "Гиларий", false, "", false, "", false, "0", "0", "344", false, false, false],
-            ["ЛоганД", "As", "Асъхений", false, "Асяу", false, "", false, "0", "0", "343", false, true, false],
-            ["Voblaa", "Vo", "Воблий", false, "Леряу", false, "", false, "0", "229", "300", false, true, false],
-            ["Гудспид", "Hiv", "Гудспидий", false, "", false, "", false, "0", "0", "332", false, false, false],
-            ["BoberkaDk", "Bo", "Боберкий", false, "", false, "", false, "0", "0", "217", false, false, false],
-            ["Krosh2211", "Kr", "Кроший", false, "Крошау", false, "Геншик", true, "0", "631", "402", false, true, false],
-            ["EisrneKreuz", "Ez", "Айзерний", false, "Алексий", false, "Алексяу", true, "0", "431", "359", false, true, true],
-            ["Оландушек", "Tn", "Тиний", false, "Тиняу", false, "", false, "64", "700", "428", false, true, true],
+            ["FrF", "Fr", "Сантьягий", false, "", false, "", false, "61", "679", "501", false, false, false, 0],
+            ["AnGelNoChi", "Ag", "Ангелночий", false, "Настий", false, "", false, "61", "668", "501", false, false, false, 0],
+            ["Keineth", "Ke", "Кийнатий", false, "Фуряу", false, "", false, "0", "705", "461", false, false, false, 0],
+            ["Excellent7", "Ex", "Экселентий", false, "", false, "", false, "0", "631", "426", false, true, false, 0],
+            ["Aellaf", "Ae", "Аеллафий", false, "", false, "", false, "58", "513", "453", false, false, false, 0],
+            ["Вальдагор", "Va", "Вальдагорий", false, "", false, "", false, "0", "0", "451", false, false, false, 0],
+            ["Rawk", "Ra", "Роукий", false, "", false, "", false, "62", "723", "450", false, false, false, 0],
+            ["Мёдик", "Mё", "Мёдий", false, "", false, "", false, "62", "641", "450", false, false, false, 0],
+            ["Anglin", "An", "Анджилиний", false, "", false, "", false, "0", "524", "446", false, false, false, 0],
+            ["Bakster", "Bs", "Бакстерий", false, "", false, "", false, "61", "530", "441", false, false, false, 0],
+            ["Vester", "Vs", "Вестерий", false, "", false, "", false, "48", "670", "439", false, false, false, 0],
+            ["ИНКОГНИТО", "El", "Елений", false, "Каймамамий", false, "", false, "0", "613", "428", false, true, false, 0],
+            ["Mix", "Mi", "Миксий", true, "Каймапапий", false, "Миксяу", true, "0", "548", "435", false, true, false, 0],
+            ["Holyman", "Hl", "Холиманий", false, "", false, "", false, "0", "421", "443", false, false, false, 0],
+            ["Adamanteus", "Ad", "Адамантий", false, "", false, "", false, "0", "454", "441", false, false, false, 0],
+            ["Incognitus", "In", "Инкогнитусий", false, "Ромий", false, "", false, "0", "0", "432", false, false, false, 0],
+            ["Meteliza", "Mz", "Металайзий", false, "", false, "", false, "61", "443", "430", false, false, false, 0],
+            ["Continentale", "Co", "Континенталей", false, "", false, "", false, "0", "381", "397", false, false, false, 0],
+            ["Хексад", "Xe", "Хексадий", false, "", false, "", false, "0", "370", "429", false, false, false, 0],
+            ["VeryAncient", "Sm", "Соломоний", false, "", false, "", false, "0", "0", "428", false, false, false, 0],
+            ["Miller124", "Mr", "Миллерий", false, "", false, "", false, "49", "647", "425", false, false, false, 0],
+            ["Ne1ro", "Ne", "Неирий", false, "", false, "", false, "62", "508", "425", false, false, false, 0],
+            ["Kissdeaths", "Kd", "Кисдасий", false, "Иваний", false, "", false, "61", "544", "419", false, false, false, 0],
+            ["Hakayomi", "Xa", "Хакаёмий", false, "", false, "", false, "65", "707", "417", false, false, false, 0],
+            ["Beyerlong", "Ba", "Байерлонгий", false, "", false, "", false, "60", "527", "416", false, false, false, 0],
+            ["KCat", "Kc", "Ккатий", false, "", false, "", false, "0", "401", "416", false, false, false, 0],
+            ["Teronanobite", "Tr", "Теронанобайтий", false, "", false, "", false, "0", "684", "414", false, false, false, 0],
+            ["Экзотический", "Dt", "Дятлий", true, "Дятляу", true, "", false, "49", "683", "428", false, true, false, 0],
+            ["Footsunushi", "Fo", "Футсунуший", false, "Никитосий", false, "", false, "0", "536", "412", false, true, false, 0],
+            ["Ryudjin", "Ry", "Рюджений", false, "", false, "", false, "61", "507", "412", false, false, false, 0],
+            ["ХПринцПенсииХ", "Pp", "Пенсий", false, "", false, "", false, "0", "537", "410", false, false, false, 0],
+            ["Slevin", "Sl", "Слэвиний", false, "", false, "", false, "0", "488", "409", false, false, false, 0],
+            ["FairyWater", "Le", "Лерий", false, "", false, "", false, "59", "485", "409", false, false, false, 0],
+            ["DubDog", "Do", "Доний", false, "", false, "", false, "0", "522", "408", false, false, false, 0],
+            ["Furtado", "Ft", "Фуртадий", false, "", false, "", false, "61", "462", "408", false, false, false, 0],
+            ["EXESIDER", "Es", "Эксайдерий", false, "", false, "", false, "59", "495", "365", false, false, false, 0],
+            ["Avalon", "Av", "Авалоний", false, "", false, "", false, "61", "481", "407", false, false, false, 0],
+            ["ProstoSam", "Ps", "Сэмий", false, "", false, "", false, "0", "639", "406", false, false, false, 0],
+            ["Мороус", "Ms", "Мороусий", false, "", false, "", false, "0", "0", "342", false, false, false, 0],
+            ["Zanir", "Zn", "Занирий", false, "Кириллий", false, "", false, "0", "604", "402", false, false, false, 0],
+            ["Drakon41k", "Dr", "Драконий", false, "Артемий", false, "", false, "0", "0", "402", false, false, false, 0],
+            ["WanBuren", "Vb", "Ванбюрений", false, "", false, "", false, "0", "515", "398", false, false, false, 0],
+            ["Angellus", "Al", "Ангелусий", false, "Мариний", false, "", false, "0", "456", "331", false, false, false, 0],
+            ["HooTeRs", "Ht", "Хутерсий", false, "", false, "", false, "0", "701", "397", false, false, false, 0],
+            ["Клевернутая", "Kl", "Клеверий", false, "Хурмий", false, "Хурмяу", false, "49", "421", "398", false, true, false, 0],
+            ["Kunoichi", "Ku", "Кивий", false, "Кусяу", false, "Пикавикий", false, "0", "589", "395", false, true, false, 0],
+            ["Ipconfig", "Ip", "Ипконфий", false, "", false, "", false, "0", "0", "217", true, false, false, 1],
+            ["Hapkomanka", "Pl", "Плотвий", false, "Владий", true, "", false, "0", "453", "390", false, false, false, 0],
+            ["MetalGear", "Mt", "Металлий", false, "Мауий", false, "", false, "66", "561", "385", false, false, false, 0],
+            ["Frezzi", "Fz", "Фреззий", false, "", false, "", false, "0", "416", "385", false, false, false, 0],
+            ["Br0djaga", "Br", "Бродягий", false, "", false, "", false, "61", "329", "383", false, false, false, 0],
+            ["БеверлиХилз", "Be", "Беверлий", false, "", false, "", false, "0", "516", "363", false, false, false, 0],
+            ["Sumeragi", "Su", "Сумерагий", false, "Димий", false, "", false, "0", "483", "362", false, false, false, 0],
+            ["Meloy", "Ml", "Мелоий", false, "", false, "", false, "0", "459", "359", false, false, false, 0],
+            ["Koa", "Ko", "Никитий", false, "Воиний", false, "", false, "61", "512", "379", false, false, false, 0],
+            ["Кубер", "Ky", "Куберий", false, "", false, "", false, "0", "544", "377", false, false, false, 0],
+            ["Правильный", "Ph", "Филипий", false, "", false, "", false, "0", "526", "375", false, false, false, 0],
+            ["Церберовна", "Ce", "Церберовий", false, "", false, "", false, "0", "444", "370", false, false, false, 0],
+            ["Stepus", "St", "Степусий", false, "", false, "", false, "0", "502", "362", false, false, false, 0],
+            ["Lucky3", "La", "Лакий", false, "Максий", false, "", false, "0", "569", "368", false, false, false, 0],
+            ["AkaiTsuki", "At", "Акатсукиий", false, "", false, "", false, "0", "0", "408", false, true, false, 0],
+            ["Верченко", "Ka", "Катий **", false, "Оладушек", false, "", false, "0", "559", "379", false, true, false, 0],
+            ["Ribbelion", "Bg", "Богданий **", true, "", false, "", false, "0", "0", "0", true, false, false, 1],
+            ["Don0mar", "Ks", "Костий **", false, "", false, "", false, "0", "0", "326", false, false, false, 0],
+            ["APLEAS", "Is", "Исий", false, "Аплеасий", false, "", false, "0", "262", "332", false, false, false, 0],
+            ["Ambrosla", "Am", "Амброслий", false, "Юрий", false, "", false, "0", "310", "358", false, false, false, 0],
+            ["MyDevka", "My", "Майий", false, "", false, "", false, "0", "0", "352", false, false, false, 0],
+            ["Loryrain", "Lo", "Лорений", false, "", false, "", false, "0", "243", "349", false, false, false, 0],
+            ["Gilarik", "Gi", "Гиларий", false, "", false, "", false, "0", "0", "344", false, false, false, 0],
+            ["ЛоганД", "As", "Асъхений", false, "Асяу", false, "", false, "0", "0", "343", false, true, false, 0],
+            ["Voblaa", "Vo", "Воблий", false, "Леряу", false, "", false, "0", "229", "300", false, true, false, 0],
+            ["Гудспид", "Hiv", "Гудспидий", false, "", false, "", false, "0", "0", "332", false, false, false, 0],
+            ["BoberkaDk", "Bo", "Боберкий", false, "", false, "", false, "0", "0", "217", false, false, false, 0],
+            ["Krosh2211", "Kr", "Кроший", false, "Крошау", false, "Геншик", true, "0", "631", "402", false, true, false, 0],
+            ["EisrneKreuz", "Ez", "Айзерний", false, "Алексий", false, "Алексяу", true, "0", "431", "359", false, true, true, 0],
+            ["Оландушек", "Tn", "Тиний", false, "Тиняу", false, "", false, "64", "700", "428", false, true, true, 0],
         ];
 
-        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA COLOR
         window.rarecaymans = [
-            ["Bodya", "Bd", "Бодий", false, "", false, "", false, "0", "0", "0", true, true, false],
-            ["CODEWEIN", "Cw", "Нурий", false, "", false, "", false, "0", "0", "0", true, true, false],
-            ["Monspit", "Mo", "Монспитий", false, "Дестроий", false, "", false, "0", "0", "0", true, true, false],
-            ["Siegel", "Ze", "Зевий", false, "Зевяу", false, "", false, "0", "0", "0", true, true, false],
-            ["Peruere", "Pr", "Алисоний", false, "Алисий", false, "", false, "0", "0", "0", true, true, false],
-            ["Dremen", "Dm", "Дремений", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Bodya", "Bd", "Бодий", false, "", false, "", false, "0", "0", "0", true, true, false, 1],
+            ["CODEWEIN", "Cw", "Нурий", false, "", false, "", false, "0", "0", "0", true, true, false, 1],
+            ["Monspit", "Mo", "Монспитий", false, "Дестроий", false, "", false, "0", "0", "0", true, true, false, 1],
+            ["Siegel", "Ze", "Зевий", false, "Зевяу", false, "", false, "0", "0", "0", true, true, false, 1],
+            ["Peruere", "Pr", "Алисоний", false, "Алисий", false, "", false, "0", "0", "0", true, true, false, 1],
+            ["Dremen", "Dm", "Дремений", false, "", false, "", false, "0", "0", "0", true, false, false, 1],
         ];
 
-        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA
+        //Nickname	Ename	Основной	R0	Изотоп_1	R1	Изотоп_2	R2	LVL	Energ	Vl	Редкоземельный	Аниме_подгруппа PIZZA COLOR
         window.frendcaymans = [
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
-            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
+            ["Nickname", "E-e", "Основной", false, "", false, "", false, "0", "0", "0", true, false, false, 2],
         ];
 
         $(function () {
@@ -187,10 +189,10 @@
             function fillElement(index, $td, elementsArray) {
                 const elementData = elementsArray[index];
                 const elementIndex = index + 1;
-                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza] = elementData;
+                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza, iColor] = elementData;
 
                 $td.append(createElementHTML(elementData, elementIndex));
-                $td.css('background-color', acayman ? '#3ec745' : '#58a85a');
+                $td.css('background-color', window.mainColor[iColor]);
                 $td.mouseenter(() => updateFocusAndCard(elementData, elementIndex));
             }
 
@@ -207,21 +209,21 @@
             }
 
             function updateFocusAndCard(data, index) {
-                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza] = data;
+                const [nickname, symbol, name, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza, iColor] = data;
 
-                updateFocus(focusElements, { name, symbol, index, nameRad, anime, pizza, acayman });
+                updateFocus(focusElements, { name, symbol, index, nameRad, anime, pizza, acayman, iColor });
                 updateCard(cardElements, { name, nickname, nameRad, isotope1, isotope1Rad, isotope2, isotope2Rad, lvl, energ, vl, acayman, anime, pizza });
             }
 
             function updateFocus(elements, data) {
-                const { name, symbol, index, nameRad, anime, pizza, acayman } = data;
+                const { name, symbol, index, nameRad, anime, pizza, acayman, iColor } = data;
                 elements.name.text(name);
                 elements.symbol.text(symbol);
                 elements.index.text(index);
                 elements.nameRad.text(nameRad ? '☢' : '');
                 elements.anime.text(anime ? 'A+' : '');
                 elements.pizza.text(pizza ? 'Pz' : '');
-                $focus.css('background-color', acayman ? '#3ec745' : '#58a85a');
+                $focus.css('background-color', window.mainColor[iColor]);
             }
 
             function updateCard(elements, data) {
@@ -281,8 +283,8 @@
         }
 
         table.periodic tr td {
-            border-width: 1px;
-            border-style: solid;
+            /*border-width: 1px;
+            border-style: solid;*/
             text-align: center;
             width: 48px;
             height: 56px;
@@ -294,11 +296,10 @@
             border-radius: 2px;
             border: 1px solid rgba(85, 85, 85, 0.95);
             cursor: pointer;
-            background-color: #58a85a;
         }
 
-        table.periodic tr td.rare {
-            background-color: #3ec745;
+        table.periodic tr td.caymalement.empty-fill {
+            background-color: #58a85a;
         }
 
         table.periodic tr td.caymalement:hover {
@@ -382,7 +383,6 @@
         }
 
         .focus-element {
-            background-color: #4acc4ee6;
             border: 1px solid rgba(85, 85, 85, 0.95);
             padding: 2px;
             border-radius: 4px;
@@ -534,7 +534,7 @@
             <td class="empty"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
-            <td class="caymalement skip"></td>
+            <td class="caymalement skip empty-fill"></td>
         </tr>
         <!-- Row 7 -->
         <tr>
@@ -554,9 +554,9 @@
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
         </tr>
         <!-- Row 8 -->
         <tr>
@@ -590,9 +590,9 @@
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
             <td class="empty"></td>
         </tr>
         <!-- Row 9 -->
@@ -603,9 +603,9 @@
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="caymalement"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
-            <td class="caymalement skip"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
+            <td class="caymalement skip empty-fill"></td>
             <td class="empty"></td>
             <td class="empty"></td>
         </tr>
@@ -617,7 +617,7 @@
             <td class="empty"></td>
             <td class="caymalement"></td>
             <td class="caymalement"></td>
-            <td class="caymalement"></td>
+            <td class="caymalement empty-fill"></td>
             <td class="empty"></td>
             <td class="empty"></td>
             <td class="empty"></td>
